@@ -1,24 +1,66 @@
 .home {
+     
+  
+    .top-section {
+      display: flex;
+      flex-wrap: wrap;
+       border-top: 2px dashed @navigation-border;    
 
-  .content-section {
-    margin: 30px 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-
-   
+    @media @mobile {
+        border-bottom: 2px dashed @navigation-border;
+    
+        }
+    
+    }
+    
+    
+    
+    .content-section {
+      margin: 30px 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    
+    
+        
+     @media @mobile {
+          flex-direction: column;
+         width: 100%;
+      }
+        
+        
     
     .text-content {
       width: 48%;
       padding-right: 1%;
+    
+        
+        
+       @media @mobile {
+           width: 100%;
+      } 
+        
+        
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
 
+      
+        
+      @media @mobile {
+           width: 100%;
+      }  
+        
+        
       img {
         border-radius: 10px;
+      
+          @media @mobile {
+              width: 100%;
+          }  
+        
       }
     }
   }
@@ -27,10 +69,19 @@
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
 
+      @media @mobile {
+          flex-direction: column-reverse;
+      }
+      
     .text-content {
       padding-left: 1%;
       padding-right: 0;
-    }
+    
+      @media @mobile {
+              width: 100%;
+          }   
+      
+      }
 
     .img-content {
       padding-right: 1%;
@@ -42,9 +93,18 @@
     width: 75%;
     margin: 0 auto 30px;
 
-    img {
+    
+       @media @mobile {
+            width: 100%;
+          }  
+      
+      
+      img {
       border-radius: 10px;
-    }
+    
+     
+      
+      }
   }
 
   .content-pick {
@@ -52,10 +112,38 @@
     border-top: 2px dashed @navigation-border;
     display: flex;
     justify-content: space-between;
-
+      
+    
+      
+       @media @mobile {
+          flex-direction: column;
+           width: 100%;
+           align-items: center;
+           
+      }
+      
+      
+      
     .destination {
       width: 30%;
-      margin-bottom: 30px;
+      margin-bottom: 30px; 
+     
+      
+       @media @mobile {
+           width: 80%;
+      }
+      
+      }
+  
+      .btn {
+          .button();
+      
+      @media @mobile {  
+          width: 80%;
+           
+      }
+      
+      }
+    
     }
-  }
 }// home
